@@ -4,12 +4,7 @@
 [![Go Report](https://goreportcard.com/badge/github.com/caffix/eventbus)](https://goreportcard.com/report/github.com/caffix/eventbus)
 [![Follow on Twitter](https://img.shields.io/twitter/follow/jeff_foley.svg?logo=twitter)](https://twitter.com/jeff_foley)
 
-Simple publish/subscribe event bus for asynchronous messaging in Go.
-
-## Contributors
-
-* [Jeff Foley](https://github.com/caffix) aka `caffix`
-  [![Follow on Twitter](https://img.shields.io/twitter/follow/jeff_foley.svg?logo=twitter)](https://twitter.com/jeff_foley)
+Simple publish/subscribe event bus for asynchronous
 
 ## Licensing [![License](https://img.shields.io/github/license/caffix/stringset)](https://www.apache.org/licenses/LICENSE-2.0)
 
