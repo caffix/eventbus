@@ -1,6 +1,5 @@
 # Event Bus
 
-[![License](https://img.shields.io/github/license/caffix/eventbus)](https://www.apache.org/licenses/LICENSE-2.0)
 [![Go Report](https://goreportcard.com/badge/github.com/caffix/eventbus)](https://goreportcard.com/report/github.com/caffix/eventbus)
 [![Follow on Twitter](https://img.shields.io/twitter/follow/jeff_foley.svg?logo=twitter)](https://twitter.com/jeff_foley)
 
