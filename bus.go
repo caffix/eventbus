@@ -32,7 +32,7 @@ type eventbusChans struct {
 // EventBus handles sending and receiving events.
 type EventBus struct {
 	channels *eventbusChans
-	queue    *queue.Queue
+	queue    queue.Queue
 	done     chan struct{}
 	closed   sync.Once
 }
@@ -107,7 +107,7 @@ type topicEntry struct {
 	sync.Mutex
 	Topic     string
 	Callbacks []reflect.Value
-	Queue     *queue.Queue
+	Queue     queue.Queue
 	Done      chan struct{}
 }
 
@@ -163,7 +163,7 @@ loop:
 				topics[unsub.Topic].Callbacks = channels
 				topics[unsub.Topic].Unlock()
 			}
-		case <-eb.queue.Signal:
+		case <-eb.queue.Signal():
 			eb.queue.Process(each)
 		}
 	}
@@ -174,7 +174,7 @@ func (eb *EventBus) processTopicEvents(topic *topicEntry) {
 		select {
 		case <-topic.Done:
 			return
-		case <-topic.Queue.Signal:
+		case <-topic.Queue.Signal():
 			topic.Lock()
 			callbacks := topic.Callbacks
 			topic.Unlock()
